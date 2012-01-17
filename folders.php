@@ -6,12 +6,12 @@
 	mkdir("./Script");
 	mkdir($PATH);
 	mkdir($APPATH);
-	$con = mysql_connect("localhost:3306", "root");
+	$con = mysql_connect("db01-share", "Custom App-24766", "FrogKissesTheQueen", true);
 	if(!$con) die("FAILED TO CONNECT");
 	if(mysql_query("CREATE DATABASE OS", $con))	echo "2";
 	else echo "0";
 	if(mysql_select_db("OS", $con))	echo "2";
-	mysql_query("DROP TABLE Users", $con);	mysql_query("DROP TABLE Apps", $con);	mysql_query("DROP TABLE Files", $con);	mysql_query("DROP TABLE AppParts", $con);
+	//mysql_query("DROP TABLE Users", $con);	mysql_query("DROP TABLE Apps", $con);	mysql_query("DROP TABLE Files", $con);	mysql_query("DROP TABLE AppParts", $con);
 	echo mysql_error($con);
 	$c1=mysql_query("CREATE TABLE Users
 	(

@@ -1,5 +1,5 @@
 <?php
-	$con = mysql_connect("localhost:3306", "root");	if(!$con || !(mysql_select_db("OS", $con))) die("CONNECTION ERROR");
+	$con = mysql_connect("db01-share", "Custom App-24766", "FrogKissesTheQueen", true);	if(!$con || !(mysql_select_db("OS", $con))) die("CONNECTION ERROR");
 	$table = array();
 	$result = mysql_query("SELECT userName FROM Users", $con);
 	while($row = mysql_fetch_array($result)) {
