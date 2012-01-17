@@ -2,7 +2,7 @@
 	session_start();if(!isset($_SESSION["CURRENT"])) header("Location:/");define("_CURRENT", $_SESSION["CURRENT"]);session_write_close();
 	ignore_user_abort(true);
 	$isApp=false;
-	$con = mysql_connect("db01-share", "Custom App-24766", "FrogKissesTheQueen", true);	if(!$con || !(mysql_select_db("OS", $con))) { mysql_close($con);  die("CONNECTION Failed."); }
+	$con = mysql_connect("db01-share", "Custom App-24766", "FrogKissesTheQueen", true);	if(!$con || !(mysql_select_db("os_phpfogapp_com", $con))) { mysql_close($con);  die("CONNECTION Failed."); }
 	function _is_trusted($appId=_APPID) {
 		global $con;
 		$list = mysql_fetch_row(mysql_query("SELECT trustedApps FROM Users WHERE userName='"._CURRENT."'", $con));

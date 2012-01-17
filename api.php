@@ -1,7 +1,7 @@
 <?php require_once "/appFunc.php";/*echo _realpath("file:///./Hello.txt");*/ ?>
 <?php
 	session_start();
-	//$con = mysql_connect("localhost:3306", "root");	if(!$con || !(mysql_select_db("OS", $con))) die("CONNECTION FAILED");
+	//$con = mysql_connect("localhost:3306", "root");	if(!$con || !(mysql_select_db("os_phpfogapp_com", $con))) die("CONNECTION FAILED");
 	$inTag = $sgl = $dbl = 0;//globals to be used b/n following funcs
 	function escape_array(&$arr) {
 		global $con;
