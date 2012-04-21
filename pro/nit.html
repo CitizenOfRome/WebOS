@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<title>Registration Form</title>
+		<style type="text/css">
+			span.ex {
+				color:red;
+			}
+			body{
+			background-image:url('mod2.jpg');
+			}
+		</style>	
+		<script>
+			function call_span(obj) {
+				//alert(document.getElementsByName(obj)[0].value);
+				if(document.getElementsByName(obj)[0].value == "") {
+					document.getElementById(obj).innerHTML = " ERROR";
+				}
+				else	document.getElementById(obj).innerHTML = "";
+			}
+			function confpass() {
+				if(document.regform.pasword.value != document.regform.confpas.value) {
+					document.getElementById('confpas').innerHTML = "PASSWORD ERROR";
+				}
+				else	call_span('confpas');
+			}
+			function validate() {
+			if(document.regform.username.value == "" || document.regform.pasword.value =="" || document.regform.confpas.value == "" || 			document.regform.pasword.value != document.regform.confpas.value || document.regform.clue.value =="" || document.regform.email.value =="" ){
+				document.getElementById("submit").innerHTML = "INCOMPLETE FORM";
+				call_span('username');
+				call_span('pasword');
+				call_span('confpas');
+				confpass();
+				call_span('clue');
+				call_span('email');
+				return false;
+			}
+				return true;
+			}
+		</script>	
+	</head>
+	<body bgcolor="CCCC99">
+			<table border="0" height="540" weight="800" >
+				<form name="regform" onsubmit="return validate()">
+					<tr><td>UserName:</td><th><input type="text" name="username" onblur="call_span('username')"/></th><td><span class="ex" id="username" ></span></td></tr>
+					<tr><td>Password:</td><th><input type="password" name="pasword" onblur="call_span('pasword')"/></th><td><span class="ex" id="pasword" ></span></td></tr>
+					<tr><td>Confirm Password:</td><th><input type="password" name="confpas" onblur="javascript:call_span('confpas');confpass('confpas');"/></th><td><span class="ex" id="confpas" ></span></td></tr>
+					<tr><td>Security Tip:</td><th><input type="text" name="clue" onblur="call_span('clue')"/></th><td><span class="ex" id="clue" ></span></td></tr>
+					<tr><td>Email Id:</td><th><input type="text" name="email" onblur="call_span('email')"/></th><td><span class="ex" id="email" ></span></td></tr>
+					<tr><td colspan="3">Terms and Conditions:<br/><textarea rows="10" cols="30" name="tc" disabled="dsisabled">terms will come here</textarea><br/></td></tr>
+					<tr><td colspan="3"><span class="ex" id="submit" ></span></td></tr>
+					<tr><td colspan="3" align="center"><input type="submit" name="submit" value=" agree and submit" /></td></tr>
+				</form>
+			</table>		
+	</body>
+</html>

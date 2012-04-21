@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<title>template</title>
+		<style type="text/css" >
+			
+			.tab {
+				height:20px;
+				margin: 10px;
+				padding: 10px;
+			}
+			
+			html, body {
+				font-family:Verdana, Arial, Helvetica, sans-serif;
+				background-repeat:;
+				background-color:#FFCCCC;
+				margin: 0;
+				padding: 0;
+				color: #99CCFF;
+				overflow:hidden;
+				height: 100%;
+				border:none
+
+			}
+			a:hover,a:active {
+				padding:10px;
+				background-color:#FFF000;
+				text-decoration:underline;
+			}
+			a:link,a:visited {
+				font-weight:bold;
+				color:#FFFFFF;
+				background-color:#99CCFF;
+				text-decoration:none;
+			}
+
+			#header {
+				overflow:auto;
+				height: 5%;
+				background-color:#666699;
+				
+			}
+			
+			#mid {
+				overflow:auto;
+				height: 95%;
+				border:1px solid red;
+			}
+			.left {
+				overflow:hidden;
+				position:relative;
+				left:0px;
+				float:left;
+				border:1px solid blue;
+				padding: 1px;
+			}
+			.right {
+				overflow:hidden;
+				position:relative;
+				right:0px;
+				float:right;
+				border:1px solid blue;
+				padding: 1px;
+			}
+
+
+		</style>
+	</head>
+	<body>
+		<!--<div id="container">-->
+			<div id="header" style="" >
+				<div class="left">
+					<span id="tab1" class="tab">	<a href="">Tab1</a> </span>
+					<span id="tab2" class="tab">	<a href="">Tab2</a> </span>
+					<span id="tab3" class="tab">	<a href="">Tab3</a> </span>
+					<span id="taba" class="tab">	<a href="">Rem.</a> </span>
+				</div>
+				<div class="right">
+					<span id="min" class="tab">	<a href="">-</a> </span>
+					<span id="clse" class="tab"> <a href="javascript:alert('HI');">X</a> </span>
+					<span id="log" class="tab">	<a href="">$</a> </span>
+				</div>
+			</div>
+			<div id="mid">
+				<span id="content" class="left" style="height:95%; width:85%" ></span>
+				<span id="ad" class="right" style="height:95%; width:11%" ></span>
+			</div>
+		<!--</div>-->
+		<!--<script language="JavaScript">
+			var max_ht = screen.availHeight;
+			var max_wd = screen.availWidth;
+			document.body.style.height = "100%";
+			document.body.style.height = max_ht + "px";
+			document.body.style.width = max_wd + "px";
+			document.onresize=function() {
+				var max_ht = screen.availHeight;
+				var max_wd = screen.availWidth;
+				document.body.style.height = max_ht + "px";
+				document.body.style.width = max_wd + "px";
+			}
+		</script>-->
+	</body>
+</html>

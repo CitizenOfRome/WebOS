@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<title>template</title>
+		<script language="JavaScript">
+			var max_ht = screen.availHeight;
+			var max_wd = screen.availWidth;
+			function setContainer() {
+				document.getElementById("header").style.height = (max_ht * 0.1) + "px";
+				document.getElementById("mid").style.height = (max_ht * 0.8) + "px";
+				document.getElementById("mid").style.backgroundColour = "red";
+				//alert("hi");
+			}
+		</script>
+		<style type="text/css" >
+			
+			.tab {
+				height:20px;
+				margin: 10px;
+				padding: 10px;
+			}
+			
+			body {
+				font-family:Verdana, Arial, Helvetica, sans-serif;
+				background-repeat:repeat-x;
+				//background-image:url('back3.jpg');
+				background-color:FFFFCC;
+				margin: 0;
+				padding: 0;
+				color: 99CCFF;
+				overflow:hidden;
+			}
+			
+			#container {
+				//background-color:red ;
+				overflow:auto;
+			}
+
+			#header {
+				overflow:auto;
+				height: 5%;
+				background-color: red;
+				background-image:url('m1.jpg');
+			}
+			
+			#mid {
+				overflow:auto;
+				height: 95%;
+				//padding: 30px;
+				border:1px solid red;
+				//background-color:red;
+			}
+			.left {
+				overflow:auto;
+				position:absolute;
+				left:0px;
+				border:1px solid blue;
+			}
+			.right {
+				overflow:auto;
+				position:absolute;
+				right:0px;
+				border:1px solid blue;
+			}
+			
+			/*a {
+			
+				padding: 20px;
+				background-color: green;
+			}*/
+			
+			a:link,a:visited {
+				font-weight:bold;
+				color:#FFFFFF;
+				background-color:99CCFF;
+				/*padding:30px;*/
+				text-decoration:underline;
+			}
+			a:hover,a:active {
+				background-color:CCCC99;
+			}
+			h1{
+				font-size:40px;
+			}
+		</style>
+	</head>
+		<body>
+			<div id="container">
+				<div id="header" style="" >
+					<div class="left">
+						<span id="tab1" class="tab">	<a href="">Tab1</a> </span>
+						<span id="tab2" class="tab">	<a href="">Tab2</a> </span>
+						<span id="tab3" class="tab">	<a href="">Tab3</a> </span>
+						<span id="taba" class="tab">	<a href="">Rem.</a> </span>
+					</div>
+					<div class="right">
+						<span id="min" class="tab">	<a href="">-</a> </span>
+						<span id="clse" class="tab" >	<a href="">X</a> </span>
+						<span id="log" class="tab">	<a href="">$</a> </span>
+					</div>
+				</div>
+				<div id="mid">
+					<span id="content" class="left" style="width:79%; height:94%"></span>
+					<span id="ad" class="right" style="width:20%; height:94%"></span>
+				</div>
+				<script language="JavaScript">	//setContainer();	</script>
+			</div>
+		</body>
+</html>
